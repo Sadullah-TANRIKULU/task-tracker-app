@@ -1,13 +1,11 @@
 import { useState } from "react";
 import AddTask from "./AddTask";
-import SaveTaskButton from "./SaveTaskButton";
 
 
 const ShowCloseButton = () => {
     const [showTaskBar, setShowTaskBar] = useState(true);
 
     const handleClick = () => {
-        console.log('clicked');
         setShowTaskBar(!showTaskBar); 
     }
 
@@ -17,7 +15,6 @@ const ShowCloseButton = () => {
                 Show Add Task Bar
             </button>
             { showTaskBar && <AddTask /> }
-            { showTaskBar && <SaveTaskButton /> }
         </div>
      );
 }
