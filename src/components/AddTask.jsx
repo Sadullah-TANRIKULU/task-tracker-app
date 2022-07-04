@@ -24,18 +24,18 @@ const AddTask = () => {
   console.log(datetimeData);
 
   return (
-    <div className="addTask flex flex-col">
-      <div className="task flex flex-col">
+    <div className="addTask flex flex-col justify-center items-center gap-2">
+      <div className="taskInput flex flex-col w-full">
         <label htmlFor="">Task</label>
-        <input type="text" onChange={handleChangeTaskData} value={taskData} />
+        <input className="h-10 flex flex-wrap max-w-prose" type="text" onChange={handleChangeTaskData} value={taskData} />
       </div>
 
-      <div className="daytime flex flex-col">
+      <div className="daytimeInput flex flex-col w-full">
         <label htmlFor="">Day & Time</label>
         <input type="text" onChange={handleChangeDatetimeData} value={datetimeData} />
       </div>
       <button
-        className="bg-amber-300 rounded-md w-36"
+        className="bg-amber-300 rounded-md w-40 "
         onClick={() => handleClick()}
       >
         Save Task

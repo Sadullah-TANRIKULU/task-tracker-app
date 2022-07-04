@@ -5,9 +5,9 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
+  <div className='m-8 flex justify-center items-center'>
     <App />
-  </>
+  </div>
 );
 
 

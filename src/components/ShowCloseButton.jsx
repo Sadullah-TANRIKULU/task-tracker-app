@@ -10,8 +10,8 @@ const ShowCloseButton = () => {
     }
 
     return ( 
-        <div className="showclosebtn">
-            <button className="bg-amber-300 rounded-md w-36" onClick={handleClick} >
+        <div className="showclosebtn flex flex-col justify-center items-center gap-2">
+            <button className="bg-amber-300 rounded-md w-40" onClick={handleClick} >
                 Show Add Task Bar
             </button>
             { showTaskBar && <AddTask /> }
