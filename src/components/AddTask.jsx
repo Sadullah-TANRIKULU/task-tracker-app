@@ -16,6 +16,7 @@ const AddTask = () => {
   };
   
   const handleClick = () => {
+    console.log('clicked');
     handleChangeTaskData();
     handleChangeDatetimeData();
   }
@@ -36,11 +37,11 @@ const AddTask = () => {
       </div>
       <button
         className="bg-amber-300 rounded-md w-40 "
-        onClick={() => handleClick()}
+        onClick={handleClick}
       >
         Save Task
       </button>
-      {<Tasks taskData ={taskData} datetimeData={datetimeData} />}
+      { taskData || datetimeData ? <Tasks taskData ={taskData} datetimeData={datetimeData} /> : 'noData' }
     </div>
   );
 };
