@@ -10,7 +10,7 @@ function App() {
 
   
   return (
-    <div className="app container bg-slate-200 w-full sm:w-2/4 flex flex-col items-center gap-4">
+    <div className="app container bg-slate-200 w-full sm:w-2/4 flex flex-col items-center gap-4 rounded-t-[11px] bg-auto bg-no-repeat bg-center">
       <Header showTaskBar = {showTaskBar} setShowTaskBar = {setShowTaskBar}/>
       {/* <Tasks /> */}
       { showTaskBar && <AddTask data = {data} setData = {setData}/> }

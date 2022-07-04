@@ -12,7 +12,7 @@ const ShowCloseButton = (props) => {
 
 
     return ( 
-        <div className="showclosebtn flex flex-col justify-center items-center gap-2">
+        <div className="showclosebtn flex flex-col justify-center items-center gap-2 text-white">
             <button className="bg-amber-300 rounded-md w-40" onClick={handleClick} >
                 {btnName ? 'Close Add Task Bar' : 'Show Add Task Bar' }
             </button>
