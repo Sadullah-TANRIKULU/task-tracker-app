@@ -1,7 +1,6 @@
 import { HiTrash } from "react-icons/hi";
 const Task = (props) => {
   
-  console.log(props);
   const {taskData, datetimeData} = props;
 
   const handleClick = () => {
