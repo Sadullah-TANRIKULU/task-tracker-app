@@ -1,24 +1,23 @@
 import { useState } from "react";
-import Task from "./Task";
-import { HiTrash } from "react-icons/hi";
-import Tasks from "./Tasks";
 
-const AddTask = () => {
+const AddTask = ({data, setData}) => {
   const [taskData, setTaskData] = useState('');
   const [datetimeData, setDatetimeData] = useState('');
-
-  
+    
   const handleChangeTaskData = (e) => {
     setTaskData(e.target.value);
+    console.log(e.target.value)
   };
   const handleChangeDatetimeData = (e) => {
     setDatetimeData(e.target.value);
+    console.log(e.target.value)
   };
   
   const handleClick = () => {
     console.log('clicked');
-    handleChangeTaskData();
-    handleChangeDatetimeData();
+    // handleChangeTaskData();
+    // handleChangeDatetimeData();
+    setData([...data, {taskData, datetimeData}]);
   }
     
   console.log(taskData);
@@ -41,7 +40,8 @@ const AddTask = () => {
       >
         Save Task
       </button>
-      { taskData || datetimeData ? <Tasks taskData ={taskData} datetimeData={datetimeData} /> : 'noData' }
+      {/* { taskData || datetimeData ? <Tasks taskData ={taskData} datetimeData={datetimeData} /> : 'noData' } */}
+      {/* <Tasks data = {data} /> */}
     </div>
   );
 };
