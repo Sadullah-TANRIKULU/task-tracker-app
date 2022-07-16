@@ -1,7 +1,3 @@
 body {
     background-image: linear-gradient(to left, aqua , lime);
 }
-
-.app {
-    background-image: url(./assets/trackingEye.png);    
-}
